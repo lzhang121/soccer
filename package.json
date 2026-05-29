@@ -1,0 +1,37 @@
+{
+  "name": "sakka-sokudoku",
+  "description": "サッカー速読 — サッカーニュース AI 3行要約 Side Panel（BYOK: OpenAI / Claude / Groq / OpenRouter）",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt -b firefox",
+    "icons": "node scripts/generate-icons.mjs",
+    "prebuild": "npm run icons",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "compile": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "ci": "npm test && npm run compile && npm run build && npm run build:firefox",
+    "postinstall": "wxt prepare"
+  },
+  "dependencies": {
+    "framer-motion": "^12.40.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@wxt-dev/module-react": "^1.1.5",
+    "happy-dom": "^20.0.10",
+    "sharp": "^0.34.2",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4",
+    "wxt": "^0.20.26"
+  }
+}

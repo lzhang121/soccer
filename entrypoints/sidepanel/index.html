@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>サッカー速読</title>
+    <style>
+      #boot-fallback {
+        padding: 20px 16px;
+        font-family: 'Segoe UI', 'Hiragino Sans', sans-serif;
+        color: #111827;
+        line-height: 1.6;
+      }
+      #boot-fallback h2 {
+        margin: 0 0 8px;
+        font-size: 1rem;
+      }
+      #boot-fallback p {
+        margin: 0 0 8px;
+        color: #5f6b66;
+        font-size: 0.9rem;
+      }
+      #boot-fallback code {
+        background: #e8f5ee;
+        padding: 1px 5px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="boot-fallback" aria-live="polite">
+        <h2>読み込み中...</h2>
+        <p>サッカー速読 Side Panel を起動しています。</p>
+      </div>
+    </div>
+    <script src="/sidepanel-boot-fallback.js"></script>
+    <script type="module" src="./main.tsx"></script>
+  </body>
+</html>
