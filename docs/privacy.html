@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>プライバシーポリシー - サッカー速読</title>
+    <style>
+      :root {
+        font-family: 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+        color: #111827;
+        background: #f4f7f5;
+        line-height: 1.75;
+      }
+      body { padding: 24px; max-width: 720px; margin: 0 auto; }
+      h1 { font-size: 1.5rem; margin-bottom: 8px; }
+      h2 { font-size: 1rem; margin-top: 24px; color: #145a38; }
+      .muted { color: #5f6b66; }
+      code { background: #e8f5ee; padding: 1px 6px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <h1>プライバシーポリシー</h1>
+    <p class="muted">サッカー速読（以下「本拡張機能」）</p>
+
+    <h2>1. 概要</h2>
+    <p>
+      本拡張機能は、ユーザーが閲覧中のサッカーニュース記事を要約するツールです。
+      開発者はサーバーを運用せず、ユーザーの API キーで AI プロバイダーへ直接リクエストします。
+    </p>
+
+    <h2>2. 収集・送信するデータ</h2>
+    <ul>
+      <li><strong>記事本文・タイトル</strong>：要約のため、ユーザー端末から OpenAI / Claude / Groq / OpenRouter 等へ送信されます。</li>
+      <li><strong>API キー</strong>：ユーザーが設定したキーを <code>chrome.storage.local</code> にのみ保存します。</li>
+      <li><strong>要約キャッシュ</strong>：同一 URL の要約結果を最大 24 時間、端末内に保存します。</li>
+    </ul>
+
+    <h2>3. 開発者が収集しないもの</h2>
+    <ul>
+      <li>個人を特定する情報</li>
+      <li>閲覧履歴の外部送信</li>
+      <li>分析・広告トラッキング</li>
+    </ul>
+
+    <h2>4. 第三者サービス</h2>
+    <p>
+      ユーザーが選択した AI プロバイダーの利用規約・プライバシーポリシーが適用されます。
+      API 利用料は各プロバイダーからユーザーに請求されます。
+    </p>
+
+    <h2>5. データの削除</h2>
+    <p>
+      Options ページからキャッシュを削除できます。拡張機能をアンインストールすると、ローカル保存データも削除されます。
+    </p>
+
+    <h2>6. お問い合わせ</h2>
+    <p class="muted">GitHub リポジトリの Issues よりご連絡ください。</p>
+
+    <p class="muted" style="margin-top: 32px">最終更新: 2026年5月</p>
+  </body>
+</html>
